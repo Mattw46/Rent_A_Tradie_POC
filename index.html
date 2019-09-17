@@ -7,10 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    
     <title>Rent A Tradie</title>
   </head>
-  <body>
+  <body onload="loadAuctions()">
     <!-- header -->
     <!--div class="jumbotron text-center">
       <h1>My First Bootstrap Page</h1>
@@ -44,6 +44,17 @@
     <!-- End Nav Section -->
 
     <!-- Body -->
+    <script>
+      /*function loadAuctions() {
+        //console.log("Hello world");
+        console.log("pageloaded");
+        //document.getElementById("content").innerHTML = "Hello World";
+        document.getElementById("pagebody").innerHTML += "Hello World";
+        alert("Page is loaded");
+      }*/
+
+      
+      </script>
     <div class="container">
       <div class="row">
         <div class="col-sm-2" style="min-width: 130px;">
@@ -51,7 +62,7 @@
           <p>Lorem ipsum dolor..</p>
         </div>
         
-        <div class="col-sm-10" style="text-align: center;">
+        <div class="col-sm-10" style="text-align: center;" id="pagebody">
           <h3>Column 2</h3>
           <p>Lorem ipsum dolor..</p>
           <!-- auctions go inside here -->
@@ -67,9 +78,9 @@
                   <p class="listing-ends-in">Ends in: <span class="listing-ends-in-amount"></span></p>
 
                   <p class="listing-total-bids">Total Bids: <span class="listing-total-bids-amount">
-                                                   </span></p><form method="GET" action="./job.php">
+                                                   </span></p><form method="GET" action=""><!-- ./job.php -->
                           <input type="hidden" name="listing_id" value="/">
-                          <button type="submot">Place bid</button>
+                          <button type="submit">Place bid</button>
                       </form>
                   <p></p>
               </div>
@@ -143,5 +154,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/auctions.js" type="text/javascript"></script>
+    
   </body>
 </html>
