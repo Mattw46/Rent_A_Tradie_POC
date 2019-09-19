@@ -1,12 +1,19 @@
 <?php
 session_start();
 
-function authenticate($user, $password) {
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require_once 'Control/sessions.php';
+//test();
+
+/*function authenticate($user, $password) {
   if ($user == "user1" && $password == "password") {
     return true;
   }
   return false;
-}
+}*/
 ?>
 <!doctype html>
 <html lang="en">
@@ -76,21 +83,20 @@ function authenticate($user, $password) {
         <div class="jumbotron text-center" style="margin-bottom:0">
         
         <?php
-        $user = $_GET["user"];
+        /*$user = $_GET["user"];
         $password = $_GET["passwd"];
         if (authenticate($user, $password)) {
           $_SESSION["token"] = "test";
           $_SESSION["authenticated"] = true;
 
-          echo "token: " . $_SESSION["token"] . "<br>";
-          echo "authenticated" . $_SESSION["authenticated"] . "<br>";
+          
           header("Location: auctions.php");
         }
         else {
           echo '<h4 style="color: red;">Login Failed try again</h4>';
           echo "user: ".$user." password: ".$password;
-        }
-          
+        }*/
+        login();  
         ?> 
         <form>
           User Name:<br>
