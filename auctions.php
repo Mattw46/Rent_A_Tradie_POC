@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,7 +26,7 @@
       </div>
     <!-- Nav section -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,7 +42,7 @@
               <a class="nav-link" href="#">Link</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
+              <a class="nav-link" href="loggedout.php">Log Out</a><!-- loggedout.php is temporary -->
             </li>   
           </ul>
         </div> 
@@ -48,6 +51,17 @@
     <!-- End Nav Section -->
 
     <!-- Body -->
+    <script>
+      /*function loadAuctions() {
+        //console.log("Hello world");
+        console.log("pageloaded");
+        //document.getElementById("content").innerHTML = "Hello World";
+        document.getElementById("pagebody").innerHTML += "Hello World";
+        alert("Page is loaded");
+      }*/
+
+      
+      </script>
     <div class="container">
       <div class="row">
         <div class="col-sm-2" style="min-width: 130px;">
