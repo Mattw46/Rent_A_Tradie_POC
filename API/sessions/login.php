@@ -22,4 +22,10 @@
     //echo 'NULL: ' . null;
     header("HTTP/1.1 401 Unauthorized");
   }
+
+  require '../../Model/runQuery.php';
+  $result = query("test");
+  if(!$result) exit('No rows');
+  var_export($result);
+  echo "Username: ".$result[0]['username']."\n";
 ?>
